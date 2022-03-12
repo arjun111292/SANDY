@@ -131,12 +131,12 @@ async def spammer(event):
         return await edit_delete(
             event, "__Use proper syntax to spam. For syntax refer help menu.__"
         )
-    if counter > 50:
-        sleeptimet = 0.5
-        sleeptimem = 1
+    if counter > 4:
+        sleeptimet = 3
+        sleeptimem = 3
     else:
-        sleeptimet = 0.1
-        sleeptimem = 0.3
+        sleeptimet = 3
+        sleeptimem = 3
     await event.delete()
     addgvar("spamwork", True)
     await spam_function(event, sandy, cat, sleeptimem, sleeptimet)
